@@ -1,8 +1,6 @@
 # [OEIS Encyclopedia](https://oeis.org/) sequences queries
 
-![OEIS icon](Icon.png)
-
-This package designed to query for __integer sequences_.
+This package designed to query for _integer sequences_ like Fibonacci 0, 1, 1, 2, 3, 5, 8,..
 
 ## Article by its number
 
