@@ -14,6 +14,9 @@
     <PackageIcon></PackageIcon>
     <PackageReleaseNotes>First release of OEIS Encyclopedia API</PackageReleaseNotes>
 	<PackageIcon>Icon.png</PackageIcon>
+	<PackageProjectUrl>https://github.com/CopperNickel/Simple.Oeis</PackageProjectUrl>
+	<RepositoryUrl>https://github.com/CopperNickel/Simple.Oeis.git</RepositoryUrl>
+	<PackageTags>OEIS</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
