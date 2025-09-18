@@ -18,7 +18,7 @@ const string FibonacciArticleName = "A000045";
 
 var query = new OeisQuery();
 
-var sequences = await query.QuerySequence(FibonacciArticleNumber);
+var sequence = await query.QuerySequence(FibonacciArticleNumber);
 ```
 ## Articles by sequence items
 
