@@ -11,7 +11,6 @@
     <Description>OEIS (Online Encyclopedia of Integer Sequences) queries</Description>
     <Copyright>Copyright (c) 2025 by Dmitrii Bychenko</Copyright>
     <PackageReadmeFile>Simple.Oeis.md</PackageReadmeFile>
-    <PackageIcon></PackageIcon>
     <PackageReleaseNotes>First release of OEIS Encyclopedia API</PackageReleaseNotes>
 	<PackageIcon>Icon.png</PackageIcon>
 	<PackageProjectUrl>https://github.com/CopperNickel/Simple.Oeis</PackageProjectUrl>
