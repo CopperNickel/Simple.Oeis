@@ -3,13 +3,9 @@
 namespace Simple.Oeis.Http;
 
 internal sealed class DefaultHttpFactory : IHttpClientFactory {
-  private static readonly Lazy<HttpClient> HttpClientBuilder = new(() => {
-    var handler = new HttpClientHandler() {
-      CookieContainer = new CookieContainer(),
-      Credentials = CredentialCache.DefaultCredentials
-    };
-
-    return new HttpClient(handler, false);
+  private static readonly Lazy<HttpClientHandler> HttpClientHandlerBuilder = new(() => new() {
+    CookieContainer = new CookieContainer(),
+    Credentials = CredentialCache.DefaultCredentials
   });
 
   private HttpClient? Client { get; }
@@ -20,5 +16,5 @@ internal sealed class DefaultHttpFactory : IHttpClientFactory {
     Client = client;
   }
 
-  public HttpClient CreateClient(string name) => Client ?? HttpClientBuilder.Value;
+  public HttpClient CreateClient(string name) => Client ?? new HttpClient(HttpClientHandlerBuilder.Value, false);
 }

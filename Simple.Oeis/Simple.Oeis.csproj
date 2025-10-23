@@ -17,6 +17,8 @@
 	<RepositoryUrl>https://github.com/CopperNickel/Simple.Oeis.git</RepositoryUrl>
 	<PackageTags>OEIS</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
+    <FileVersion>1.0.0.1</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

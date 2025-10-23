@@ -1,5 +1,6 @@
 ﻿using Simple.Oeis.Http;
 using System.Globalization;
+using System.Net;
 using System.Numerics;
 using System.Text.Json;
 
@@ -66,13 +67,15 @@ public sealed class OeisQuery : IOeisQuery {
 
   #region Algorithm
 
+  private const string HttpPrefix = "https://oeis.org/";
+
   private async Task<IReadOnlyList<IOeisSequence>> CoreQuerySequence(string query, CancellationToken token = default) {
     if (string.IsNullOrEmpty(query)) 
       return [];
     
     using var client = Factory.CreateClient(IOeisQuery.HttpClientName);
 
-    var address = $"https://oeis.org/search?q={string.Join(",", query)}&fmt=json";
+    var address = $"{HttpPrefix}search?q={query}&fmt=json";
 
     using var response = await client.GetAsync(new Uri(address), token).ConfigureAwait(false);
 
@@ -101,7 +104,7 @@ public sealed class OeisQuery : IOeisQuery {
     
     using var client = Factory.CreateClient(IOeisQuery.HttpClientName);
 
-    var address = $"https://oeis.org/A{query}?fmt=json";
+    var address = $"{HttpPrefix}A{query}?fmt=json";
 
     using var response = await client.GetAsync(new Uri(address), token).ConfigureAwait(false);
 
